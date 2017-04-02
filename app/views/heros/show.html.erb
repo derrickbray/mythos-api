@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @hero.name %>
+</p>
+
+<p>
+  <strong>Powers:</strong>
+  <%= @hero.powers %>
+</p>
+
+<p>
+  <strong>House:</strong>
+  <%= @hero.house %>
+</p>
+
+<p>
+  <strong>Spouse:</strong>
+  <%= @hero.spouse %>
+</p>
+
+<p>
+  <strong>Parents:</strong>
+  <%= @hero.parents %>
+</p>
+
+<p>
+  <strong>Children:</strong>
+  <%= @hero.children %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @hero.description %>
+</p>
+
+<%= link_to 'Edit', edit_hero_path(@hero) %> |
+<%= link_to 'Back', heros_path %>
