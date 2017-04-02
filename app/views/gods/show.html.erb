@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @god.name %>
+</p>
+
+<p>
+  <strong>Powers:</strong>
+  <%= @god.powers %>
+</p>
+
+<p>
+  <strong>House:</strong>
+  <%= @god.house %>
+</p>
+
+<p>
+  <strong>Spouse:</strong>
+  <%= @god.spouse %>
+</p>
+
+<p>
+  <strong>Parents:</strong>
+  <%= @god.parents %>
+</p>
+
+<p>
+  <strong>Children:</strong>
+  <%= @god.children %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @god.description %>
+</p>
+
+<%= link_to 'Edit', edit_god_path(@god) %> |
+<%= link_to 'Back', gods_path %>

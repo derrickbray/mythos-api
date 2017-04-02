@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  powers: MyText
+  house: MyString
+  spouse: MyString
+  parents: MyString
+  children: MyString
+  description: MyText
+  stories: 
+
+two:
+  name: MyString
+  powers: MyText
+  house: MyString
+  spouse: MyString
+  parents: MyString
+  children: MyString
+  description: MyText
+  stories: 

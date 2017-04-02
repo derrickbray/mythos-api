@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Gods</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Powers</th>
+      <th>House</th>
+      <th>Spouse</th>
+      <th>Parents</th>
+      <th>Children</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gods.each do |god| %>
+      <tr>
+        <td><%= god.name %></td>
+        <td><%= god.powers %></td>
+        <td><%= god.house %></td>
+        <td><%= god.spouse %></td>
+        <td><%= god.parents %></td>
+        <td><%= god.children %></td>
+        <td><%= god.description %></td>
+        <td><%= link_to 'Show', god %></td>
+        <td><%= link_to 'Edit', edit_god_path(god) %></td>
+        <td><%= link_to 'Destroy', god, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New God', new_god_path %>
