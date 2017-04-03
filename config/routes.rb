@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :myths
   get 'mythos/index'
   root 'mythos#index'
   resources :heros

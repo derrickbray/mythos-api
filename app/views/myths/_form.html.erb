@@ -1,0 +1,52 @@
+<%= form_for(myth) do |f| %>
+  <% if myth.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(myth.errors.count, "error") %> prohibited this myth from being saved:</h2>
+
+      <ul>
+      <% myth.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :subtitle %>
+    <%= f.text_field :subtitle %>
+  </div>
+
+  <div class="field">
+    <%= f.label :author %>
+    <%= f.text_field :author %>
+  </div>
+
+  <div class="field">
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </div>
+
+  <div class="field">
+    <%= f.label :character_id %>
+    <%= f.text_field :character_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :order %>
+    <%= f.number_field :order %>
+  </div>
+
+  <div class="field">
+    <%= f.label :publish %>
+    <%= f.check_box :publish %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

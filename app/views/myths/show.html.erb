@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @myth.title %>
+</p>
+
+<p>
+  <strong>Subtitle:</strong>
+  <%= @myth.subtitle %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @myth.author %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @myth.body %>
+</p>
+
+<p>
+  <strong>Character:</strong>
+  <%= @myth.character %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @myth.order %>
+</p>
+
+<p>
+  <strong>Publish:</strong>
+  <%= @myth.publish %>
+</p>
+
+<%= link_to 'Edit', edit_myth_path(@myth) %> |
+<%= link_to 'Back', myths_path %>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  subtitle: MyString
+  author: MyString
+  body: MyText
+  character: one
+  order: 1
+  publish: false
+
+two:
+  title: MyString
+  subtitle: MyString
+  author: MyString
+  body: MyText
+  character: two
+  order: 1
+  publish: false

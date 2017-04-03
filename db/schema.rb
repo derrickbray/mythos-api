@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170402061216) do
+ActiveRecord::Schema.define(version: 20170403151830) do
 
   create_table "gods", force: :cascade do |t|
     t.string   "name"
@@ -34,6 +34,19 @@ ActiveRecord::Schema.define(version: 20170402061216) do
     t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "myths", force: :cascade do |t|
+    t.string   "title"
+    t.string   "subtitle"
+    t.string   "author"
+    t.text     "body"
+    t.integer  "character_id"
+    t.integer  "order"
+    t.boolean  "publish"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["character_id"], name: "index_myths_on_character_id"
   end
 
 end
