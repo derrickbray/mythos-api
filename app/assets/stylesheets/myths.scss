@@ -2,8 +2,60 @@
   text-align: center;
 }
 
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.top-link {
+
+}
+
 .card {
   padding: 1rem;
   background: #F6F3F3;
   color: #704241;
+
+  &__content {
+    padding: 1rem;
+
+    &-title {
+      text-align: center;
+    }
+    &-sub {
+      text-align: center;
+    }
+    &-author {
+      text-align: center;
+    }
+    &-item {}
+  }
+}
+
+.button-box {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem;
+
+  &__btn {
+    padding: 0.7rem;
+    border: 0.1rem solid #704241;
+    border-radius: 0.4rem;
+
+    &:hover {
+      background: #704241;
+
+      a {
+        color: white;
+      }
+    }
+
+    a {
+      color: #704241;
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
 }

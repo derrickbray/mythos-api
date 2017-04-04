@@ -17,20 +17,22 @@
 <p id="notice"><%= notice %></p>
 
 <div class="container">
-    <div class="button"><%= link_to 'Create a New Myth', new_myth_path %></div>
+    <div class="center">
+      <h1 class="top-link"><%= link_to 'Create a New Myth', new_myth_path %></h1>
+    </div>
 </div>
 <div class="container">
     <div class="card">
         <% @myths.each do |myth| %>
         <div class="card__content">
-            <div class="card__content-title"><%= myth.title %></div>
+            <h2 class="card__content-title"><%= myth.title %></h2>
             <div class="card__content-sub"><%= myth.subtitle %></div>
-            <div class="card__content-item">Author:
+            <div class="card__content-author">By:
                 <%= myth.author %></div>
             <div class="card__content-item"><%= myth.body %></div>
             <div class="button-box">
-                <div class="button"><%= link_to 'Edit', edit_myth_path(myth) %></div>
-                <div class="button"><%= link_to 'Delete', myth, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+                <div class="button-box__btn"><%= link_to 'Edit', edit_myth_path(myth) %></div>
+                <div class="button-box__btn"><%= link_to 'Delete', myth, method: :delete, data: { confirm: 'Are you sure?' } %></div>
             </div>
         </div>
         <% end %>
