@@ -1,36 +1,38 @@
 <div class="nav">
-  <div class="container">
-    <div class="nav__content">
-      <div class="nav__title">
-        <%= link_to 'Mythos', root_path %>
-      </div>
-      <div class="nav__links">
-      <span class="underline"><%= link_to 'Myths', myths_path(@myth) %></span>
-      <%= link_to 'Gods', gods_path(@god) %>
-      <%= link_to 'Heros', heros_path(@hero) %>
+    <div class="container">
+        <div class="nav__content">
+            <div class="nav__title">
+                <%= link_to 'Mythos', root_path %>
+            </div>
+            <div class="nav__links">
+                <span class="underline"><%= link_to 'Myths', myths_path(@myth) %></span>
+                <%= link_to 'Gods', gods_path(@god) %>
+                <%= link_to 'Heros', heros_path(@hero) %>
+            </div>
+        </div>
     </div>
-  </div>
-  </div>
 </div>
-
 
 <h1 class="page-title">Myths</h1>
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Create a New Myth', new_myth_path %>
-
-  <div class="card">
-    <% @myths.each do |myth| %>
-      <div class="card__content">
-        <div class="card__content-title"><%= myth.title %></div>
-        <div class="card__content-sub"><%= myth.subtitle %></div>
-        <div class="card__content-item"><%= myth.author %></div>
-        <div class="card__content-item"><%= myth.body %></div>
-        <!-- <div><%= myth.order %></div>
-        <div><%= myth.publish %></div> -->
-        <div><%= link_to 'Show', myth %></div>
-        <div><%= link_to 'Edit', edit_myth_path(myth) %></div>
-        <div><%= link_to 'Destroy', myth, method: :delete, data: { confirm: 'Are you sure?' } %></div>
-      </div>
-    <% end %>
-  </div>
+<div class="container">
+    <div class="button"><%= link_to 'Create a New Myth', new_myth_path %></div>
+</div>
+<div class="container">
+    <div class="card">
+        <% @myths.each do |myth| %>
+        <div class="card__content">
+            <div class="card__content-title"><%= myth.title %></div>
+            <div class="card__content-sub"><%= myth.subtitle %></div>
+            <div class="card__content-item">Author:
+                <%= myth.author %></div>
+            <div class="card__content-item"><%= myth.body %></div>
+            <div class="button-box">
+                <div class="button"><%= link_to 'Edit', edit_myth_path(myth) %></div>
+                <div class="button"><%= link_to 'Delete', myth, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+            </div>
+        </div>
+        <% end %>
+    </div>
+</div>
