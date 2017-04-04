@@ -1,3 +1,18 @@
+<div class="nav">
+  <div class="container">
+    <div class="nav__content">
+      <div class="nav__title">
+        <%= link_to 'Mythos', root_path %>
+      </div>
+      <div class="nav__links">
+      <%= link_to 'Myths', myths_path(@myth) %>
+      <%= link_to 'Gods', gods_path(@god) %>
+      <span class="underline"><%= link_to 'Heros', heros_path(@hero) %></span>
+    </div>
+  </div>
+  </div>
+</div>
+
 <p id="notice"><%= notice %></p>
 
 <p>
