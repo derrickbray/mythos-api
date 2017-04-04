@@ -12,40 +12,25 @@
   </div>
   </div>
 </div>
+
+
+<h1 class="page-title">Myths</h1>
 <p id="notice"><%= notice %></p>
 
-<h1>Myths</h1>
+<%= link_to 'Create a New Myth', new_myth_path %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Subtitle</th>
-      <th>Author</th>
-      <th>Body</th>
-      <th>Order</th>
-      <th>Publish</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+  <div class="card">
     <% @myths.each do |myth| %>
-      <tr>
-        <td><%= myth.title %></td>
-        <td><%= myth.subtitle %></td>
-        <td><%= myth.author %></td>
-        <td><%= myth.body %></td>
-        <td><%= myth.order %></td>
-        <td><%= myth.publish %></td>
-        <td><%= link_to 'Show', myth %></td>
-        <td><%= link_to 'Edit', edit_myth_path(myth) %></td>
-        <td><%= link_to 'Destroy', myth, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="card__content">
+        <div class="card__content-title"><%= myth.title %></div>
+        <div class="card__content-sub"><%= myth.subtitle %></div>
+        <div class="card__content-item"><%= myth.author %></div>
+        <div class="card__content-item"><%= myth.body %></div>
+        <!-- <div><%= myth.order %></div>
+        <div><%= myth.publish %></div> -->
+        <div><%= link_to 'Show', myth %></div>
+        <div><%= link_to 'Edit', edit_myth_path(myth) %></div>
+        <div><%= link_to 'Destroy', myth, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+      </div>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Myth', new_myth_path %>
+  </div>
