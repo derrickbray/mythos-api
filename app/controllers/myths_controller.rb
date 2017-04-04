@@ -69,6 +69,6 @@ class MythsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def myth_params
-      params.require(:myth).permit(:title, :subtitle, :author, :body, :character_id, :order, :publish)
+      params.require(:myth).permit(:title, :subtitle, :author, :body, :order, :publish)
     end
 end
