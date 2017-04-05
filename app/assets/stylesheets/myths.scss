@@ -8,9 +8,22 @@
 }
 
 .top-link {
+  padding: 0.7rem;
+  border: 0.1rem solid #704241;
+  border-radius: 0.4rem;
 
+  a {
+    color: #704241;
+  }
+
+  &:hover {
+    background: #704241;
+
+    a {
+      color: white;
+    }
 }
-
+}
 .card {
   padding: 1rem;
   background: #F6F3F3;
