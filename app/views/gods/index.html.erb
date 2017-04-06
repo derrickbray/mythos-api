@@ -13,42 +13,36 @@
   </div>
 </div>
 
+<h1 class="page-title">Gods Home</h1>
 <p id="notice"><%= notice %></p>
 
-<h1>Gods</h1>
+<div class="container">
+  <div class="center">
+    <h1 class="top-link"><%= link_to 'Create a New God', new_god_path %></h1>
+  </div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>House</th>
-      <th>Spouse</th>
-      <th>Parents</th>
-      <th>Children</th>
-      <th>Powers</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="container">
 
-  <tbody>
-    <% @gods.each do |god| %>
-      <tr>
-        <td><%= god.name %></td>
-        <td><%= god.house %></td>
-        <td><%= god.spouse %></td>
-        <td><%= god.parents %></td>
-        <td><%= god.children %></td>
-        <td><%= god.powers %></td>
+  <% @gods.each do |god| %>
+
+    <div class="card">
+      <div class="card__content">
+
+
+        <h2 class="card__content-title"><%= god.name %></h2>
+        <div class="card__content-sub"><%= god.house %></div>
+        <div class="card__content-sub"><%= god.spouse %></div>
+        <div class="card__content-sub"><%= god.parents %></div>
+        <div class="card__content-sub"><%= god.children %></div>
+        <div class="card__content-sub"><%= god.powers %></div>
         <td><%= god.description %></td>
         <td><%= link_to 'Show', god %></td>
         <td><%= link_to 'Edit', edit_god_path(god) %></td>
         <td><%= link_to 'Destroy', god, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+
+      </div>
+    </div>
     <% end %>
-  </tbody>
-</table>
 
-<br>
-
-<%= link_to 'New God', new_god_path %>
+  </div>
