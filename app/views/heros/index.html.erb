@@ -13,42 +13,38 @@
   </div>
 </div>
 
+
+<h1 class="page-title">Heros Home</h1>
 <p id="notice"><%= notice %></p>
 
-<h1>Heros</h1>
+<div class="container">
+  <div class="center">
+    <h1 class="top-link"><%= link_to 'Create a New Hero', new_hero_path %></h1>
+  </div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>House</th>
-      <th>Spouse</th>
-      <th>Parents</th>
-      <th>Children</th>
-      <th>Powers</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="container">
 
-  <tbody>
-    <% @heros.each do |hero| %>
-      <tr>
-        <td><%= hero.name %></td>
-        <td><%= hero.house %></td>
-        <td><%= hero.spouse %></td>
-        <td><%= hero.parents %></td>
-        <td><%= hero.children %></td>
-        <td><%= hero.powers %></td>
-        <td><%= hero.description %></td>
-        <td><%= link_to 'Show', hero %></td>
-        <td><%= link_to 'Edit', edit_hero_path(hero) %></td>
-        <td><%= link_to 'Destroy', hero, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+  <% @heros.each do |hero| %>
+
+    <div class="card">
+      <div class="card__content">
+
+
+        <h2 class="card__content-title"><%= hero.name %></h2>
+        <div class="card__content-sub">House: <%= hero.house %></div>
+        <div class="card__content-sub">Spouse: <%= hero.spouse %></div>
+        <div class="card__content-sub">Parents: <%= hero.parents %></div>
+        <div class="card__content-sub">Children: <%= hero.children %></div>
+        <div class="card__content-sub">Powers: <%= hero.powers %></div>
+        <div class="card__content-item"><%= hero.description %></div>
+        <div class="button-box">
+          <div class="button-box__btn"><%= link_to 'Edit', edit_hero_path(hero) %></div>
+          <div class="button-box__btn"><%= link_to 'Destroy', hero, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+        </div>
+
+      </div>
+    </div>
     <% end %>
-  </tbody>
-</table>
 
-<br>
-
-<%= link_to 'New Hero', new_hero_path %>
+  </div>
