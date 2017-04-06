@@ -1,5 +1,6 @@
 .page-title {
   text-align: center;
+  color: #704241;
 }
 
 .center {
@@ -22,12 +23,14 @@
     a {
       color: white;
     }
-}
+  }
 }
 .card {
+  margin: 1rem;
   padding: 1rem;
   background: #F6F3F3;
   color: #704241;
+  box-shadow: 0.2rem 0.2rem 0.4rem rgba(0,0,0,0.4);
 
   &__content {
     padding: 1rem;

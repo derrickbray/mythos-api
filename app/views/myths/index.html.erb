@@ -13,7 +13,7 @@
     </div>
 </div>
 
-<h1 class="page-title">Myths</h1>
+<h1 class="page-title">Myths Home</h1>
 <p id="notice"><%= notice %></p>
 
 <div class="container">
@@ -22,8 +22,8 @@
     </div>
 </div>
 <div class="container">
+  <% @myths.each do |myth| %>
     <div class="card">
-        <% @myths.each do |myth| %>
         <div class="card__content">
             <h2 class="card__content-title"><%= myth.title %></h2>
             <div class="card__content-sub"><%= myth.subtitle %></div>
@@ -35,6 +35,6 @@
                 <div class="button-box__btn"><%= link_to 'Delete', myth, method: :delete, data: { confirm: 'Are you sure?' } %></div>
             </div>
         </div>
-        <% end %>
     </div>
+    <% end %>
 </div>
