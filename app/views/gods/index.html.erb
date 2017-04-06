@@ -31,15 +31,17 @@
 
 
         <h2 class="card__content-title"><%= god.name %></h2>
-        <div class="card__content-sub"><%= god.house %></div>
-        <div class="card__content-sub"><%= god.spouse %></div>
-        <div class="card__content-sub"><%= god.parents %></div>
-        <div class="card__content-sub"><%= god.children %></div>
-        <div class="card__content-sub"><%= god.powers %></div>
-        <td><%= god.description %></td>
-        <td><%= link_to 'Show', god %></td>
-        <td><%= link_to 'Edit', edit_god_path(god) %></td>
-        <td><%= link_to 'Destroy', god, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <div class="card__content-sub">House: <%= god.house %></div>
+        <div class="card__content-sub">Spouse: <%= god.spouse %></div>
+        <div class="card__content-sub">Parents: <%= god.parents %></div>
+        <div class="card__content-sub">Children: <%= god.children %></div>
+        <div class="card__content-sub">Powers: <%= god.powers %></div>
+        <div class="card__content-item"><%= god.description %></div>
+        <!-- <td><%= link_to 'Show', god %></td> -->
+        <div class="button-box">
+          <div class="button-box__btn"><%= link_to 'Edit', edit_god_path(god) %></div>
+          <div class="button-box__btn"><%= link_to 'Destroy', god, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+        </div>
 
       </div>
     </div>
