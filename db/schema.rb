@@ -41,12 +41,10 @@ ActiveRecord::Schema.define(version: 20170403151830) do
     t.string   "subtitle"
     t.string   "author"
     t.text     "body"
-    t.integer  "character_id"
     t.integer  "order"
     t.boolean  "publish"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.index ["character_id"], name: "index_myths_on_character_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
