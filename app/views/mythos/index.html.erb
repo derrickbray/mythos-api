@@ -29,13 +29,23 @@
           <div class="about__card-title">Read</div>
           <div class="about__card-tag">See other people's mythology, gods, and heros. Sometimes it is completely new and novel or it can be a retelling of an old story. All in good fun.
           </div>
+          <div class="button-box">
+            <div class="button-box__btn"><%= link_to 'Myths', myths_path(@myth) %></div>
+            <div class="button-box__btn"><%= link_to 'Gods', gods_path(@god) %></div>
+            <div class="button-box__btn"><%= link_to 'Heros', heros_path(@hero) %></div>
+          </div>
         </div>
       </div>
 
       <div class="about__card">
         <div class="about__card-content">
           <div class="about__card-title">Contribute</div>
-          <div class="about__card-tag">Do you have a myth you want to tell? or have an idea for an amazing new god? Well submit your ideas into Mythos. Hopefully, others can take and run with your ideas to places you haven't thought of.
+          <div class="about__card-tag">Do you have a myth you want to tell? or have an idea for an amazing new god? Well submit your ideas into Mythos and others can take and run with your ideas.
+          </div>
+          <div class="button-box">
+            <div class="button-box__btn"><%= link_to 'New Myth', new_myth_path %></div>
+            <div class="button-box__btn"><%= link_to 'New God', new_god_path %></div>
+            <div class="button-box__btn"><%= link_to 'New Hero', new_hero_path %></div>
           </div>
         </div>
       </div>
