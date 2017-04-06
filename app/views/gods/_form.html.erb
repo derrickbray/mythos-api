@@ -26,42 +26,46 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
+  <div class="card">
+    <h1 class="page-title">New Hero</h1>
+      <div class="form-title">
+          <%= f.label :name %>
+          <%= f.text_field :name, class: 'form-input' %>
+      </div>
 
-  <div class="field">
-    <%= f.label :house %>
-    <%= f.text_field :house %>
-  </div>
+      <div class="form-title">
+          <%= f.label :house %>
+          <%= f.text_field :house, class: 'form-input' %>
+      </div>
 
-  <div class="field">
-    <%= f.label :spouse %>
-    <%= f.text_field :spouse %>
-  </div>
+      <div class="form-title">
+          <%= f.label :spouse %>
+          <%= f.text_field :spouse, class: 'form-input' %>
+      </div>
 
-  <div class="field">
-    <%= f.label :parents %>
-    <%= f.text_field :parents %>
-  </div>
+      <div class="form-title">
+          <%= f.label :parents %>
+          <%= f.text_field :parents, class: 'form-input' %>
+      </div>
 
-  <div class="field">
-    <%= f.label :children %>
-    <%= f.text_field :children %>
-  </div>
+      <div class="form-title">
+          <%= f.label :children %>
+          <%= f.text_field :children, class: 'form-input' %>
+      </div>
 
-  <div class="field">
-    <%= f.label :powers %>
-    <%= f.text_area :powers %>
-  </div>
+      <div class="form-title">
+          <%= f.label :powers %>
+          <%= f.text_area :powers, class: 'form-input'  %>
+      </div>
 
-  <div class="field">
-    <%= f.label :description %>
-    <%= f.text_area :description %>
-  </div>
+      <div class="form-title">
+          <%= f.label :description %>
+          <%= f.text_area :description, class: 'form-input__text' %>
+      </div>
 
-  <div class="actions">
-    <%= f.submit %>
+      <div class="button-box">
+          <%= f.submit class:'button-box__btn'%>
+          <%= link_to 'Back', heros_path, class:'button-box__btn' %>
+      </div>
   </div>
 <% end %>
