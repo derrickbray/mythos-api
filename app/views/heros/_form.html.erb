@@ -1,67 +1,72 @@
 <div class="nav">
-  <div class="container">
-    <div class="nav__content">
-      <div class="nav__title">
-        <%= link_to 'Mythos', root_path %>
-      </div>
-      <div class="nav__links">
-      <%= link_to 'Myths', myths_path(@myth) %>
-      <%= link_to 'Gods', gods_path(@god) %>
-      <span class="underline"><%= link_to 'Heros', heros_path(@hero) %></span>
+    <div class="container">
+        <div class="nav__content">
+            <div class="nav__title">
+                <%= link_to 'Mythos', root_path %>
+            </div>
+            <div class="nav__links">
+                <%= link_to 'Myths', myths_path(@myth) %>
+                <%= link_to 'Gods', gods_path(@god) %>
+                <span class="underline"><%= link_to 'Heros', heros_path(@hero) %></span>
+            </div>
+        </div>
     </div>
-  </div>
-  </div>
 </div>
 
 <%= form_for(hero) do |f| %>
-  <% if hero.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(hero.errors.count, "error") %> prohibited this hero from being saved:</h2>
+<% if hero.errors.any? %>
+<div id="error_explanation">
+    <h2><%= pluralize(hero.errors.count, "error") %>
+        prohibited this hero from being saved:</h2>
 
-      <ul>
-      <% hero.errors.full_messages.each do |message| %>
+    <ul>
+        <% hero.errors.full_messages.each do |message| %>
         <li><%= message %></li>
-      <% end %>
-      </ul>
+        <% end %>
+    </ul>
+</div>
+<% end %>
+
+<div class="card">
+  <h1 class="page-title">New Hero</h1>
+    <div class="form-title">
+        <%= f.label :name %>
+        <%= f.text_field :name, class: 'form-input' %>
     </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
+    <div class="form-title">
+        <%= f.label :house %>
+        <%= f.text_field :house, class: 'form-input' %>
+    </div>
 
-  <div class="field">
-    <%= f.label :house %>
-    <%= f.text_field :house %>
-  </div>
+    <div class="form-title">
+        <%= f.label :spouse %>
+        <%= f.text_field :spouse, class: 'form-input' %>
+    </div>
 
-  <div class="field">
-    <%= f.label :spouse %>
-    <%= f.text_field :spouse %>
-  </div>
+    <div class="form-title">
+        <%= f.label :parents %>
+        <%= f.text_field :parents, class: 'form-input' %>
+    </div>
 
-  <div class="field">
-    <%= f.label :parents %>
-    <%= f.text_field :parents %>
-  </div>
+    <div class="form-title">
+        <%= f.label :children %>
+        <%= f.text_field :children, class: 'form-input' %>
+    </div>
 
-  <div class="field">
-    <%= f.label :children %>
-    <%= f.text_field :children %>
-  </div>
+    <div class="form-title">
+        <%= f.label :powers %>
+        <%= f.text_area :powers, class: 'form-input'  %>
+    </div>
 
-  <div class="field">
-    <%= f.label :powers %>
-    <%= f.text_area :powers %>
-  </div>
+    <div class="form-title">
+        <%= f.label :description %>
+        <%= f.text_area :description, class: 'form-input__text' %>
+    </div>
 
-  <div class="field">
-    <%= f.label :description %>
-    <%= f.text_area :description %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="button-box">
+        <%= f.submit class:'button-box__btn'%>
+        <%= link_to 'Back', heros_path, class:'button-box__btn' %>
+    </div>
+</div>
 <% end %>
