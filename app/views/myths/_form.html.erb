@@ -1,62 +1,55 @@
 <div class="nav">
-  <div class="container">
-    <div class="nav__content">
-      <div class="nav__title">
-        <%= link_to 'Mythos', root_path %>
-      </div>
-      <div class="nav__links">
-      <span class="underline"><%= link_to 'Myths', myths_path(@myth) %></span>
-      <%= link_to 'Gods', gods_path(@god) %>
-      <%= link_to 'Heros', heros_path(@hero) %>
+    <div class="container">
+        <div class="nav__content">
+            <div class="nav__title">
+                <%= link_to 'Mythos', root_path %>
+            </div>
+            <div class="nav__links">
+                <span class="underline"><%= link_to 'Myths', myths_path(@myth) %></span>
+                <%= link_to 'Gods', gods_path(@god) %>
+                <%= link_to 'Heros', heros_path(@hero) %>
+            </div>
+        </div>
     </div>
-  </div>
-  </div>
 </div>
 
 <%= form_for(myth) do |f| %>
-  <% if myth.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(myth.errors.count, "error") %> prohibited this myth from being saved:</h2>
+<% if myth.errors.any? %>
+<div id="error_explanation">
+    <h2><%= pluralize(myth.errors.count, "error") %>
+        prohibited this myth from being saved:</h2>
 
-      <ul>
-      <% myth.errors.full_messages.each do |message| %>
+    <ul>
+        <% myth.errors.full_messages.each do |message| %>
         <li><%= message %></li>
-      <% end %>
-      </ul>
+        <% end %>
+    </ul>
+</div>
+<% end %>
+
+<div class="card">
+    <div class="form-title">
+        <%= f.label :title %>
+        <%= f.text_field :title, class: 'form-input'%>
     </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
+    <div class="form-title">
+        <%= f.label :subtitle %>
+        <%= f.text_field :subtitle, class: 'form-input' %>
+    </div>
 
-  <div class="field">
-    <%= f.label :subtitle %>
-    <%= f.text_field :subtitle %>
-  </div>
+    <div class="form-title">
+        <%= f.label :author %>
+        <%= f.text_field :author, class: 'form-input' %>
+    </div>
 
-  <div class="field">
-    <%= f.label :author %>
-    <%= f.text_field :author %>
-  </div>
+    <div class="form-title">
+        <%= f.label :body %>
+        <%= f.text_area :body %>
+    </div>
 
-  <div class="field">
-    <%= f.label :body %>
-    <%= f.text_area :body %>
-  </div>
-
-  <div class="field">
-    <%= f.label :order %>
-    <%= f.number_field :order %>
-  </div>
-
-  <div class="field">
-    <%= f.label :publish %>
-    <%= f.check_box :publish %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="actions">
+        <%= f.submit %>
+    </div>
+</div>
 <% end %>
