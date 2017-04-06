@@ -57,9 +57,12 @@
     padding: 0.7rem;
     border: 0.1rem solid #704241;
     border-radius: 0.4rem;
+    background: white;
+    color: #704241;
 
     &:hover {
       background: #704241;
+      color: white;
 
       a {
         color: white;
@@ -86,4 +89,12 @@
   border: none;
   outline: none;
   font-size: 1.5rem;
+
+  &__text {
+    width: 80%;
+    height: 19rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+  }
 }

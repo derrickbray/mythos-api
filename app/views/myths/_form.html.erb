@@ -27,7 +27,9 @@
 </div>
 <% end %>
 
+
 <div class="card">
+  <h1 class="page-title">New Myth</h1>
     <div class="form-title">
         <%= f.label :title %>
         <%= f.text_field :title, class: 'form-input'%>
@@ -45,11 +47,13 @@
 
     <div class="form-title">
         <%= f.label :body %>
-        <%= f.text_area :body %>
+        <%= f.text_area :body, class: 'form-input__text' %>
     </div>
 
-    <div class="actions">
-        <%= f.submit %>
+    <div class="button-box">
+        <%= f.submit class:'button-box__btn'%>
+        <%= link_to 'Back', myths_path, class:'button-box__btn' %>
     </div>
+
 </div>
 <% end %>
