@@ -27,7 +27,8 @@
 }
 
 .card {
-  margin: 1rem;
+  width: 80%;
+  margin: 1rem auto;
   padding: 1rem;
   background: #F6F3F3;
   color: #704241;
@@ -46,6 +47,7 @@
       text-align: center;
     }
     &-item {
+      margin: auto;
       width: 50%;
       text-align: center;
     }
